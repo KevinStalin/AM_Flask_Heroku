@@ -1,2 +1,0 @@
-nombre = 'Kevin Ramirez'
-
