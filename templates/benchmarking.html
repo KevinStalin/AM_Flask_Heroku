@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>Benchmarking</title>
 
-    <!-- <script src="{{url_for('static', filename='js/scripts.js')}}"></script> -->
+    <!-- <script src="{{url_for('static', filename='js/scripts.js')}}">
+        </script> -->
     <!-- <script type="text/javascript" src="funciones.js"></script> -->
 
     <!-- <script type="text/javascript" src="{{url_for('static', filename='kevin02.js')}}"></script> -->
@@ -20,6 +21,16 @@
     <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
+
+
+    <!-- <script src="{{url_for('static', filename='js/scripts.js')}}"></script> -->
+    <link href="http://code.jquery.com/jquery-2.1.4.min.js" rel="stylesheet">
+    <link href="http://code.highcharts.com/highcharts.js" rel="stylesheet">
+    <link href="http://code.highcharts.com/modules/exporting.js" rel="stylesheet">
+    <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js" rel="stylesheet"></script> -->
+    <!-- <script src="http://code.highcharts.com/highcharts.js" rel="stylesheet"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js" rel="stylesheet"></script> -->
+
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -45,7 +56,7 @@
     <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container"><a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span
-                class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.html">Algoritmos </a>
+                class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </a><a class="brand" href="index.html">Benchmarking </a>
 
                 <!--/.nav-collapse -->
             </div>
@@ -175,17 +186,25 @@
     </script>
     <br><br><br>
     <div class="span6">
-        <div class="widget widget-nopad">
+        <div class="widget widget-nopad" style="
+        width : 1200px;
+        height : 200px;
+        overflow : auto;">
             <div class="widget-header"> <i class="icon-list-alt"></i>
-                <h3> Total de datos </h3>
+
+                <h3> Comparación de los modelos de aprendizaje supervisado (iris, vino) </h3>
+
+
             </div>
             <!-- /widget-header -->
             <div class="widget-content">
                 <div class="widget big-stats-container">
                     <div class="widget-content">
-                        <h6 class="bigstats">Valor acurracy de vino </h6>
+                        <!-- <h6 class="bigstats">Valor acurracy de vino </h6> -->
                         <div id="big_stats" class="cf">
-                            <h3>{{ acurracy_W }}</h3>
+                            <h5> Los algoritmos de aprendizaje supervisado que fueron implementados poseen diferentes valores en sus metricas de rendimientos al momento de realizar la clasificación.<br> En este caso se utilizo el dataset de Iris y el dataset
+                                Wine como se puede apreciar en las diferentes gráficas, en el caso de Iris los 6 algoritmos presentes nos realizan una buen modelo por lo que los errores son muy bajos y la precisión del modelo alta.<br> En el caso de dataset
+                                Wine empiezan a ocurrir fallos en algunos modelos con una predicción de errores muy alta, los que mejor se acoplan a este dataset son: Random Forest, Naive Bayes y Redes Neuronales.</h5>
                         </div>
                     </div>
                 </div>
